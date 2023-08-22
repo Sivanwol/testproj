@@ -63,6 +63,15 @@ export class APIService {
     return null;
   }
 
+  public async exportUser(userId: number) {
+    const response = await this.apiClient.get(`/exports/contacts/?platform=instagram&url=${userId}`);
+    if (response.status === 200) {
+      if (response.data.success) {
+        return response.data.user_profile;
+      }
+    }
+    return null;
+  }
   private formatLargeNumber(number: number): string {
     if (number >= 1000000) {
       return (number / 1000000).toFixed(1) + " mil";
