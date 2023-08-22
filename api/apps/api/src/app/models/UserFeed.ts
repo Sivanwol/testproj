@@ -26,6 +26,7 @@ interface FeedCarouselItem {
 }
 export interface UserFeed {
   more_available: boolean;
+  status: string;
   end_cursor: string;
   items: FeedItem[];
 }

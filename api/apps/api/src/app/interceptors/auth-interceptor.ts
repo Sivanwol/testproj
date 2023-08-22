@@ -8,7 +8,7 @@ export class AuthInterceptor implements HttpInterceptor {
     // Add your global headers here
     const modifiedRequest = request.clone({
       setHeaders: {
-        'authkey': 'rm8AtiwDVl', // Replace with your actual header
+        'authkey': 'fZLcQxjr5u', // Replace with your actual header
       },
     });
 
